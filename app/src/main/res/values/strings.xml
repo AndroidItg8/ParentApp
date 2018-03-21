@@ -1,0 +1,29 @@
+<resources>
+    <string name="role">Parent</string>
+
+    <string name="app_name">Parent App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="empty_mobile">Please insert your mobile number</string>
+    <string name="empty_password">Please insert your password</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="invalid_pass">Password must be minimum 6 characters</string>
+    <string name="url_login">http://192.168.1.54:8088/</string>
+    <string name="rationale_ask_sms">This permission is for your conveniance. Your privacy is safe with us.</string>
+    <string name="action_notification">Notification</string>
+
+    <string name="title_activity_login">" "</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="invalid_mobile">Invalid Mobile Number</string>
+    <string name="title_history">History</string>
+    <string name="title_request">Request</string>
+    <string name="title_profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">MainActivity</string>
+    
+</resources>

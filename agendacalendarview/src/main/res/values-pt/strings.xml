@@ -1,0 +1,7 @@
+<resources>
+    <!-- Agenda -->
+    <string name="agenda_event_day_duration">d</string>
+    <string name="agenda_event_no_events">Sem eventos</string>
+
+    <!-- Weather -->
+</resources>

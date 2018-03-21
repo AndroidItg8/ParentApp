@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardPreventCornerOverlap="true"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardUseCompatPadding="true"
+
+    >
+    <!--app:="@android:color/transparent"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rlStatus">
+
+            <com.itg8.parentapp.widgets.CircleImageView
+                android:id="@+id/fabChildImage"
+                android:layout_width="@dimen/fab_width"
+                android:layout_height="@dimen/fab_height"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="1dp"
+                app:civ_shadow="true"
+                android:src="@mipmap/ic_launcher"
+                app:civ_shadow_radius="10"
+                app:civ_shadow_color="@color/black_overlay"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@+id/fabChildImage"
+                android:layout_toEndOf="@+id/fabChildImage"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/childName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto"
+                    android:lines="1"
+                    android:text="children 1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_location"
+                    android:layout_width="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="14dp"
+                    android:layout_below="@+id/childName"
+                    app:srcCompat="@drawable/ic_location_on_white_24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/childName"
+                    android:layout_toEndOf="@+id/img_location"
+                    android:layout_toRightOf="@+id/img_location"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingLeft="4dp"
+                    android:paddingStart="4dp"
+                    android:text="Presently at school"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/small_text_size" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rlStatus"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/rv_main"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgStatus"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_green" />
+
+            <TextView
+                android:id="@+id/txtSyncStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center"
+                android:text="13 min ago"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/v_small_text_size" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

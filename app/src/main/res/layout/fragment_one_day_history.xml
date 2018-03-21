@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.itg8.parentapp.children.today_history.OneDayHistoryFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.framgia.library.calendardayview.CalendarDayView
+            android:id="@+id/dayView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:eventMarginLeft="10dp"
+            app:dayHeight="@dimen/dayHeight"/>
+    </ScrollView>
+</FrameLayout>
