@@ -13,6 +13,7 @@ android {
     }
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
+        exclude 'typedefs.txt'
     }
     dataBinding {
         enabled = true
@@ -51,6 +52,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation project(':library')
     implementation project(':agendacalendarview')
+    implementation project(':callibrary')
+
 }
 
 //apply plugin: 'com.jakewharton.butterknife'

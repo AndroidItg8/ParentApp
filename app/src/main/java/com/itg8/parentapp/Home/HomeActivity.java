@@ -10,18 +10,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import com.google.android.gms.maps.MapView;
 import com.itg8.parentapp.Home.mvp.HomeMvp;
 import com.itg8.parentapp.R;
+import com.itg8.parentapp.attendence.AttendanceFragment;
 import com.itg8.parentapp.children.ChildFragmentInteractor;
 import com.itg8.parentapp.children.ChildrenFragment;
 import com.itg8.parentapp.children.old_history.HistoryFragment;
 import com.itg8.parentapp.children.today_history.OneDayHistoryFragment;
 import com.itg8.parentapp.common.BaseActivity;
 import com.itg8.parentapp.common.CommonMethod;
-import com.itg8.parentapp.common.Prefs;
 import com.itg8.parentapp.db.model.TblChildren;
 import com.itg8.parentapp.db.model.TblNotification;
 import com.itg8.parentapp.login.LoginActivity;
@@ -53,7 +52,6 @@ public class HomeActivity extends BaseActivity implements ChildFragmentInteracto
                 case R.id.navigation_history:
                     if(currentFragment.equalsIgnoreCase(HistoryFragment.TAG))
                         return true;
-
                     fm=getSupportFragmentManager();
                     ft=fm.beginTransaction();
                     ft.replace(R.id.container, HistoryFragment.newInstance("",""),HistoryFragment.TAG);
@@ -63,6 +61,12 @@ public class HomeActivity extends BaseActivity implements ChildFragmentInteracto
                 case R.id.navigation_profile:
                     return true;
                 case R.id.navigation_request:
+                    toolbar.setTitle("Attendance");
+                    fm=getSupportFragmentManager();
+                    ft=fm.beginTransaction();
+                    ft.replace(R.id.container, AttendanceFragment.newInstance("",""),HistoryFragment.TAG);
+                    ft.addToBackStack(HistoryFragment.TAG);
+                    ft.commit();
                     return true;
             }
             return false;
