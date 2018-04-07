@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.itg8.parentapp.attendence.AttendanceFragment">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <com.itg8.parentapp.widgets.CircleImageView
+                android:id="@+id/fabChildImage"
+                android:layout_width="@dimen/fab_width"
+                android:layout_height="@dimen/fab_height"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="1dp"
+                android:layout_centerVertical="true"
+                app:civ_shadow="true"
+                app:civ_shadow_color="@color/black_overlay"
+                app:civ_shadow_radius="10" />
+
+            <TextView
+                android:id="@+id/lbl_child_name"
+                android:layout_toStartOf="@+id/lbl_present"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/fabChildImage"
+                android:layout_toRightOf="@+id/fabChildImage"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:layout_alignTop="@+id/fabChildImage"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="Swapnil Meshram"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_2_text_size"
+                android:textStyle="normal"
+                android:layout_toLeftOf="@+id/lbl_present" />
+
+            <TextView
+                android:id="@+id/lbl_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_child_name"
+                android:layout_marginEnd="04dp"
+                android:layout_marginRight="04dp"
+                android:layout_toEndOf="@+id/fabChildImage"
+                android:layout_toRightOf="@+id/fabChildImage"
+                android:fontFamily="@font/roboto_light"
+                android:lines="1"
+                android:text="Class"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/lbl_class_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/lbl_class"
+                android:layout_below="@+id/lbl_child_name"
+                android:layout_marginEnd="04dp"
+                android:layout_marginLeft="04dp"
+                android:layout_marginRight="04dp"
+                android:layout_marginStart="04dp"
+                android:layout_toEndOf="@+id/lbl_class"
+                android:layout_toRightOf="@+id/lbl_class"
+                android:fontFamily="@font/roboto"
+                android:lines="1"
+                android:text="X B"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lbl_class_value"
+                android:layout_alignTop="@+id/lbl_class_value"
+                android:layout_toEndOf="@+id/lbl_class_value"
+                android:layout_toRightOf="@+id/lbl_class_value"
+                android:background="@color/colorGray" />
+
+            <TextView
+                android:id="@+id/lbl_roll_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_child_name"
+                android:layout_marginStart="04dp"
+                android:layout_marginLeft="04dp"
+                android:layout_toEndOf="@+id/view"
+                android:layout_toRightOf="@+id/view"
+                android:fontFamily="@font/roboto_light"
+                android:lines="1"
+                android:text="Roll No:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/lbl_roll_no_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/lbl_class"
+                android:layout_below="@+id/lbl_child_name"
+                android:layout_marginEnd="04dp"
+                android:layout_marginLeft="04dp"
+                android:layout_marginRight="04dp"
+                android:layout_marginStart="04dp"
+                android:layout_toEndOf="@+id/lbl_roll_no"
+                android:layout_toRightOf="@+id/lbl_roll_no"
+                android:fontFamily="@font/roboto"
+                android:lines="1"
+                android:text="06"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/small_text_size"/>
+
+            <TextView
+                android:id="@+id/lbl_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_roll_no_value"
+                android:layout_marginEnd="04dp"
+                android:layout_marginRight="04dp"
+                android:layout_toEndOf="@+id/fabChildImage"
+                android:layout_toRightOf="@+id/fabChildImage"
+                android:fontFamily="@font/roboto"
+                android:lines="1"
+                android:text="Present days"
+                android:layout_marginTop="04dp"
+
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/lbl_present_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_roll_no_value"
+                android:layout_marginEnd="04dp"
+                android:layout_marginLeft="04dp"
+                android:layout_marginRight="04dp"
+                android:layout_marginStart="04dp"
+                android:layout_marginTop="04dp"
+                android:layout_toEndOf="@+id/lbl_day"
+                android:layout_toRightOf="@+id/lbl_day"
+                android:fontFamily="@font/roboto"
+                android:lines="1"
+                android:text="21/25"
+                android:textStyle="normal"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/medium_text_size"/>
+
+
+
+
+                <TextView
+                    android:id="@+id/lbl_present"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:fontFamily="@font/roboto"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="P"
+                    android:layout_marginTop="08dp"
+                    android:layout_toStartOf="@+id/lbl_present_value"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="normal"
+                    android:layout_marginStart="04dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="04dp"
+                    android:layout_alignTop="@+id/lbl_child_name"
+
+                    android:background="@color/colorGreenDark"
+                    android:layout_toLeftOf="@+id/lbl_present_value"
+                    android:layout_marginLeft="04dp" />
+                <TextView
+                    android:id="@+id/lbl_present_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginEnd="04dp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="- 54"
+                    android:gravity="center"
+                    android:layout_marginTop="08dp"
+                   android:layout_toStartOf="@+id/lbl_absent"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="normal"
+                    android:layout_alignTop="@+id/lbl_child_name"
+
+                    android:layout_marginRight="04dp"
+                    android:layout_toLeftOf="@+id/lbl_absent" />
+
+
+            <TextView
+                android:id="@+id/lbl_absent"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="A"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="normal"
+                android:layout_marginStart="04dp"
+                android:gravity="center"
+                android:layout_marginEnd="04dp"
+                android:layout_alignTop="@+id/lbl_child_name"
+
+                android:layout_toStartOf="@+id/lbl_absent_value"
+                android:background="@color/colorRedDark"
+                android:layout_marginTop="08dp"
+                android:layout_marginLeft="04dp"
+                android:layout_toLeftOf="@+id/lbl_absent_value" />
+            <TextView
+                android:id="@+id/lbl_absent_value"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto"
+                android:layout_marginEnd="04dp"
+                android:layout_alignParentRight="true"
+                android:lines="1"
+                android:layout_alignTop="@+id/lbl_child_name"
+                android:maxLines="1"
+                android:text="- 4"
+                android:gravity="center"
+
+                android:layout_marginTop="08dp"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="normal"
+                android:layout_marginRight="04dp"
+                />
+
+            <TextView
+                android:id="@+id/lbl_leave"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto"
+                android:lines="1"
+                android:maxLines="1"
+                android:layout_below="@+id/lbl_present"
+                android:text="L"
+                android:layout_toStartOf="@+id/lbl_present_value"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="normal"
+                android:layout_marginStart="04dp"
+                android:gravity="center"
+                android:layout_marginTop="08dp"
+                android:layout_marginEnd="04dp"
+                android:background="@color/colorBlueDark"
+                android:layout_toLeftOf="@+id/lbl_present_value"
+                android:layout_marginLeft="04dp" />
+            <TextView
+                android:id="@+id/lbl_leave_value"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:fontFamily="@font/roboto"
+                android:layout_marginEnd="04dp"
+             android:layout_toEndOf="@+id/lbl_leave"
+                android:lines="1"
+
+                android:layout_below="@+id/lbl_present_value"
+                android:maxLines="1"
+                android:text="- 54"
+                android:gravity="center"
+                android:layout_marginTop="08dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="normal"
+                android:layout_marginRight="04dp"
+                android:layout_toRightOf="@+id/lbl_leave" />
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+<ScrollView
+    android:layout_below="@+id/cardview"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerView"
+            android:layout_below="@+id/calendarView"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</ScrollView>
+
+
+</RelativeLayout>
