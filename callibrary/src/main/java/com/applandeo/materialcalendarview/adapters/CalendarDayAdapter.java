@@ -78,7 +78,10 @@ class CalendarDayAdapter extends ArrayAdapter<Date> {
                     Typeface.NORMAL, R.drawable.background_transparent);
             return;
         }
-
+        if(isAllSelectedDay()){
+            DayColorsUtils.setSelectedDayColors(dayLabel, mCalendarProperties);
+            return;
+        }
         // Set view for all SelectedDays
         if (isSelectedDay(day)) {
             Stream.of(mCalendarPageAdapter.getSelectedDays())
@@ -98,6 +101,10 @@ class CalendarDayAdapter extends ArrayAdapter<Date> {
 
         // Setting current month day color
         DayColorsUtils.setCurrentMonthDayColors(day, mToday, dayLabel, mCalendarProperties);
+    }
+
+    private boolean isAllSelectedDay(){
+        return mCalendarProperties.getIsAllSelected();
     }
 
     private boolean isSelectedDay(Calendar day) {

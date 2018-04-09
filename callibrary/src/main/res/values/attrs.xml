@@ -16,6 +16,8 @@
         <attr name="anotherMonthsDaysLabelsColor" format="color" />
         <attr name="datePicker" format="boolean" />
         <attr name="type" />
+        <attr name="allSelected" format="boolean" />
+
     </declare-styleable>
 
     <attr name="type" format="enum">

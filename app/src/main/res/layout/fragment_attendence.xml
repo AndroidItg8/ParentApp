@@ -327,6 +327,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            app:selectionColor="#3F51B5"
+            app:selectionLabelColor="#FFFFFF"
+            app:allSelected="true"
+            app:type="many_days_picker"
             />
 
         <android.support.v7.widget.RecyclerView

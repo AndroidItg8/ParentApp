@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.applandeo.materialcalendarview.CalendarView;
 import com.applandeo.materialcalendarview.EventDay;
+import com.applandeo.materialcalendarview.listeners.OnDayClickListener;
 import com.applandeo.materialcalendarview.utils.DateUtils;
 import com.itg8.parentapp.R;
 import com.itg8.parentapp.widgets.CircleImageView;
@@ -166,6 +167,9 @@ public class AttendanceFragment extends Fragment {
         calendarView.setMaximumDate(max);
 
         calendarView.setEvents(events);
+
+
+
 //        calendarView.setDisabledDays(getDisabledDays());
     }
 

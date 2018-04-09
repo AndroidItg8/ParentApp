@@ -44,6 +44,7 @@ public class CalendarProperties {
     private List<Calendar> mDisabledDays = new ArrayList<>();
 
     private Context mContext;
+    private boolean isAllSelected;
 
     public CalendarProperties(Context context) {
         mContext = context;
@@ -298,5 +299,13 @@ public class CalendarProperties {
 
     public void setAnotherMonthsDaysLabelsColor(int anotherMonthsDaysLabelsColor) {
         mAnotherMonthsDaysLabelsColor = anotherMonthsDaysLabelsColor;
+    }
+
+    public boolean getIsAllSelected() {
+        return isAllSelected;
+    }
+
+    public void setAllSelected(boolean allSelected) {
+        isAllSelected = allSelected;
     }
 }

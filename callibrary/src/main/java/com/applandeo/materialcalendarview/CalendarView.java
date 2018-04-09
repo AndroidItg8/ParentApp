@@ -152,6 +152,9 @@ public class CalendarView extends LinearLayout {
         int selectionLabelColor = typedArray.getColor(R.styleable.CalendarView_selectionLabelColor, 0);
         mCalendarProperties.setSelectionLabelColor(selectionLabelColor);
 
+        boolean isAllSelected=typedArray.getBoolean(R.styleable.CalendarView_allSelected,false);
+        mCalendarProperties.setAllSelected(isAllSelected);
+
         int disabledDaysLabelsColor = typedArray.getColor(R.styleable.CalendarView_disabledDaysLabelsColor, 0);
         mCalendarProperties.setDisabledDaysLabelsColor(disabledDaysLabelsColor);
 
