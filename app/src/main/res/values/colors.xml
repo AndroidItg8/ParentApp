@@ -5,10 +5,12 @@
     <color name="colorPrimaryDark">#004d40</color>
     <color name="colorAccent">#AD2F2F</color>
     <color name="colorWhite">#FFFFFF</color>
-
     <color name="black_overlay">#66000000</color>
     <color name="card_half_transparent">#1fffffff</color>
     <color name="colorGray">#e0e0e0</color>
+
+
+
     <color name="colorGreen">#7cff49</color>
     <color name="colorGreenDark">#2BAD35</color>
     <color name="colorBlueDark">#00A6FC</color>

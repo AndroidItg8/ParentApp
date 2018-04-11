@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ParentApp.iml" filepath="$PROJECT_DIR$/.idea/ParentApp.iml" />
-      <module fileurl="file://D:/Ayesha/ParentApp/ParentApp.iml" filepath="D:/Ayesha/ParentApp/ParentApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/ParentAppDesign.iml" filepath="$PROJECT_DIR$/.idea/ParentAppDesign.iml" />
+      <module fileurl="file://D:\Ayesha\ParentApp\ParentApp.iml" filepath="D:\Ayesha\ParentApp\ParentApp.iml" />
+      <module fileurl="file://D:\Ayesha\ParentApp\.idea\ParentAppDesign.iml" filepath="D:\Ayesha\ParentApp\.idea\ParentAppDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/agendacalendarview/agendacalendarview.iml" filepath="$PROJECT_DIR$/agendacalendarview/agendacalendarview.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/callibrary/callibrary.iml" filepath="$PROJECT_DIR$/callibrary/callibrary.iml" />

@@ -4,6 +4,7 @@ package com.itg8.parentapp.attendence;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -118,7 +119,6 @@ public class AttendanceFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_attendence, container, false);
         unbinder = ButterKnife.bind(this, view);
-
         init();
         return view;
 
@@ -131,6 +131,9 @@ public class AttendanceFragment extends Fragment {
 
     private void setRecyclerView() {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(dividerItemDecoration);
+        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setAdapter(new AttendanceAdapter(getActivity()));
     }
 
@@ -139,7 +142,7 @@ public class AttendanceFragment extends Fragment {
         List<EventDay> events = new ArrayList<>();
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_MONTH,2);
+        calendar.set(Calendar.DAY_OF_MONTH, 2);
         events.add(new EventDay(calendar, R.drawable.ic_circle_green));
         calendar = Calendar.getInstance();
         calendar.set(Calendar.DAY_OF_MONTH, 3);
@@ -152,9 +155,8 @@ public class AttendanceFragment extends Fragment {
         calendar.set(Calendar.DAY_OF_MONTH, 5);
         events.add(new EventDay(calendar, R.drawable.ic_circle_green));
         calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_MONTH, 6 );
+        calendar.set(Calendar.DAY_OF_MONTH, 6);
         events.add(new EventDay(calendar, R.drawable.ic_circle_green));
-
 
 
         Calendar min = Calendar.getInstance();

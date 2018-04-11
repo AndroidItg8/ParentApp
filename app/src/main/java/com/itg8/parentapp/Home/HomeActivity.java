@@ -65,7 +65,7 @@ public class HomeActivity extends BaseActivity implements ChildFragmentInteracto
                     fm=getSupportFragmentManager();
                     ft=fm.beginTransaction();
                     ft.replace(R.id.container, AttendanceFragment.newInstance("",""),HistoryFragment.TAG);
-                    ft.addToBackStack(HistoryFragment.TAG);
+                    ft.addToBackStack(AttendanceFragment.class.getSimpleName());
                     ft.commit();
                     return true;
             }

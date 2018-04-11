@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
 
-</android.support.constraint.ConstraintLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_date"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorRedDark">
+
+
+            <TextView
+                android:id="@+id/lbl_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto_light"
+                android:text="30"
+                android:layout_marginTop="04dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_2_text_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/lbl_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="MON"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/lbl_Date"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size"
+                android:layout_marginBottom="04dp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lbl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/rl_date"
+        android:layout_marginStart="08dp"
+        android:layout_marginEnd="08dp"
+        android:layout_alignTop="@+id/rl_date"
+        android:layout_toRightOf="@+id/rl_date"
+        android:textSize="@dimen/medium_text_size"
+        android:textStyle="normal"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/roboto"
+        android:text="LEAVE FOR MEDICAL"
+        android:textAllCaps="false"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="08dp" />
+
+    <TextView
+     android:layout_below="@+id/lbl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/rl_date"
+        android:layout_marginStart="08dp"
+        android:layout_marginEnd="08dp"
+        android:layout_toRightOf="@+id/rl_date"
+        android:textSize="@dimen/small_text_size"
+        android:textStyle="normal"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/roboto_light"
+        android:text="This short description of the why take leave.This short description of the why take leaveThis short description of the why take leaveThis short description of the why take leaveThis short description of the why take leave "
+        android:textAllCaps="false"
+        android:lines="2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_alignBottom="@+id/rl_date"
+        android:layout_marginLeft="08dp" />
+
+
+
+
+
+</RelativeLayout>
